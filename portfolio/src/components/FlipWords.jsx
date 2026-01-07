@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 
 export const FlipWords = ({
   words,
@@ -52,8 +52,8 @@ export const FlipWords = ({
           scale: 2,
           position: "absolute",
         }}
-        className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+        className={twMerge(
+          "z-10 inline-block relative text-left",
           className
         )}
         key={currentWord}>
