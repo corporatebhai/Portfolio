@@ -2,6 +2,11 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,18 +33,28 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
+      if (
+        !EMAILJS_SERVICE_ID ||
+        !EMAILJS_TEMPLATE_ID ||
+        !EMAILJS_PUBLIC_KEY
+      ) {
+        throw new Error("Missing EmailJS configuration");
+      }
+
       console.log("From submitted:", formData);
       await emailjs.send(
-        "service_79b0nyj",
-        "template_17us8im",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Samarjeet Kumar",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "corporatebhai@gmail.com",
           message: formData.message,
+          subject: `New portfolio message from ${formData.name}`,
+          reply_to: formData.email,
         },
-        "pn-Bw_mS1_QQdofuV"
+        EMAILJS_PUBLIC_KEY
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -47,11 +62,30 @@ const Contact = () => {
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      if (error?.text === "Account not found") {
+        showAlertMessage(
+          "danger",
+          "Email service is not configured with your EmailJS account yet."
+        );
+        return;
+      }
+
+      if (error?.message === "Missing EmailJS configuration") {
+        showAlertMessage(
+          "danger",
+          "Missing EmailJS keys. Add your EmailJS env variables first."
+        );
+        return;
+      }
+
+      showAlertMessage("danger", "Something went wrong!");
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section
+      id="contact"
+      className="relative flex items-center c-space section-spacing scroll-mt-24"
+    >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}

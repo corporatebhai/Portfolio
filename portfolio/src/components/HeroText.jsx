@@ -16,7 +16,7 @@ const HeroText = () => {
             initial='hidden'
             animate='visible'
             transition={{ duration: 1 }}
-            >Hi I'm Samar-jeet</motion.h1>
+            >Hi I'm Samarjeet</motion.h1>
             <div className="flex flex-col items-start">
                 <motion.p className="text-5xl font-medium text-neutral-300"
                 variants={variants}

@@ -1,60 +1,57 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Lofi Music Stores",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "A web application for streaming and discovering lo-fi music, designed to provide a calm and focused listening experience.",
+
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Built a responsive music streaming interface using HTML, CSS, and JavaScript.",
+      "Implemented audio playback controls including play, pause, and track switching.",
+      "Designed a clean and minimal UI to match the relaxing aesthetic of lo-fi music.",
+      "Added playlist browsing and track selection to make music discovery simple and intuitive.",
     ],
-    href: "",
+    href: "https://lofi-582wjd02z-samarjeets-projects-0db5dd3f.vercel.app/",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/lofi-music-store.svg",
     tags: [
       {
         id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        name: "JavaScript",
+        path: "/assets/logos/javascript.svg",
       },
       {
         id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
+        name: "HTML",
+        path: "/assets/logos/html5.svg",
       },
       {
         id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "CSS",
+        path: "/assets/logos/css3.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
+    title: "Wikipedia-Map",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "A web app for visualizing the connections between Wikipedia pages",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "Built an interactive graph visualization interface using React, TypeScript, and vis-network.",
+      "Implemented dynamic node expansion by fetching related Wikipedia links through the Wikipedia API.",
+      "Designed a trace-back system to highlight navigation paths between nodes for better graph exploration.",
+      "Implemented responsive interaction patterns including hover tracing, node selection, and expansion events.",
+      "Optimized rendering and graph updates using DataSet structures and React refs for efficient state handling.",
     ],
-    href: "",
+    href: "https://wikipedia-map-roan.vercel.app/",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/wikipedia-map.svg",
     tags: [
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
       },
       {
         id: 2,
@@ -63,161 +60,18 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "Wikipedia API",
+        path: "/assets/logos/wikipedia.svg",
       },
       {
-        id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        id: 5,
+        name: "vis-network",
+        path: "/assets/logos/vis-network.svg",
       },
     ],
   },
@@ -231,43 +85,37 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "https://www.linkedin.com/in/samarjeet-kumar-59799a1b9/",
     icon: "/assets/socials/linkedIn.svg",
   },
 ];
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
-    contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
-    ],
-  },
-  {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
+    company: "Jio Platforms Limited",
+    title: "Graduate Engineer Trainee",
+    job: "Frontend Developer",
     date: "2023-2024",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
+      "Worked on production-scale frontend applications using React.js and Next.js, contributing to internal tools used by 1000+ users.",
+      "Built reusable UI components using JavaScript, TypeScript, and Tailwind CSS to improve development speed and maintain consistency.",
+      "Integrated REST APIs and handled dynamic data rendering, loading states, and error scenarios in the UI.",
+      "Fixed UI bugs and improved responsiveness across different screen sizes and devices.",
+      "Collaborated with backend engineers and designers to deliver features in an Agile development environment."
     ],
   },
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
+    company: "Jio Platforms Limited",
+    title: "Software Developer",
+    job: "Frontend Developer",
+    date: "2024-Present",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Developed and maintained scalable frontend applications using React.js and Next.js for production use cases.",
+      "Optimized application performance using lazy loading, memoization, and code splitting, reducing page load times significantly.",
+      "Debugged and resolved production issues by analyzing network requests, logs, and API responses.",
+      "Implemented robust error handling and improved application stability for edge cases and API failures.",
+      "Enhanced user experience by fixing layout issues, improving responsiveness, and reducing unnecessary re-renders.",
+      "Worked closely with cross-functional teams to ship features, handle feedback, and iterate quickly in Agile sprints."
     ],
   },
 ];
